@@ -1,3 +1,4 @@
+var Data = require("../../utils/swiper.js");
 Page({
 
   /**
@@ -10,10 +11,20 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function () {
+    var that = this;
+    that.setData({
+      swiper: Data.swiper,
+      banner: Data.banner,
+      organize: Data.organize,
+      pition_detail: Data.pition_detail,
+    })
   },
-
+  setting:function () {
+    wx.navigateTo({
+      url: '../per-info/per-info',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -61,12 +72,5 @@ Page({
    */
   onShareAppMessage: function () {
     
-  },
-
-  register_success:function () {
-    wx.navigateTo({
-      url: '../prepare_competition/prepare_competition',
-    })
-  },
-  
+  }
 })

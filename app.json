@@ -16,7 +16,8 @@
     "example/order/order",
     "example/setion/setion",
     "example/fdback/fdback",
-    "pages/index/index"
+    "pages/index/index",
+    "example/prepare_competition/prepare_competition"
   ],
   "window": {
     "navigationBarTextStyle": "black",

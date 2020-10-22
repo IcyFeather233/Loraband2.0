@@ -86,7 +86,7 @@ var pition_detail = [
   },
   {
     title:'报名费用',
-    desc:'100元/人'
+    desc:'免费'
   },
 ];
 var organize = [

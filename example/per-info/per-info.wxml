@@ -43,7 +43,7 @@
 
         </view>
         <view class="btn">
-			<button class="weui-btn" type="primary">确认</button>
+			<button class="weui-btn" type="primary" bindtap="register_success">确认</button>
         </view>
 	</view>
 	<view class="page__ft"></view>
