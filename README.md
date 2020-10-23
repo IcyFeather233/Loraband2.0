@@ -1,2 +1,1 @@
-# wxapp_ydh
-运动荟
+LoraBand微信小程序
