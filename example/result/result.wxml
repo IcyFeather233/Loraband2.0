@@ -1,0 +1,7 @@
+<!--example/result/result.wxml-->
+<text>打卡时间： </text>
+<view><text>{{locate_time}}</text></view>
+<text>打卡经度： </text>
+<view><text>{{locate_lon}}</text></view>
+<text>打卡纬度： </text>
+<view><text>{{locate_lat}}</text></view>

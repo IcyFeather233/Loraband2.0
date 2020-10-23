@@ -53,7 +53,7 @@
                 </view>
             </view>
         </view>
-        <button class="weui-btn report" bindtap="setting" type="primary">开始比赛</button>
+        <button class="weui-btn report" bindtap="go_result" type="primary">开始比赛</button>
 	</view>
 	<view class="page__ft"></view>
 </view>

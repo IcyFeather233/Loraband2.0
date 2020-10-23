@@ -72,5 +72,11 @@ Page({
    */
   onShareAppMessage: function () {
     
-  }
+  },
+  go_result:function () {
+    wx.navigateTo({
+      url: '../result/result',
+    })
+  },
+  
 })
