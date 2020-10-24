@@ -1,0 +1,4 @@
+<map id="map" latitude="{{latitude}}" longitude="{{longitude}}"  controls="{{controls}}" bindcontroltap="controltap"
+ markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange"   scale="15"  show-location>
+ </map>
+<view><button bindtap="to_valuate">结束</button></view>

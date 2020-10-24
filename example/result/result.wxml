@@ -1,7 +1,27 @@
 <!--example/result/result.wxml-->
+
+<view>运动员编号：{{id1}}</view>
 <text>打卡时间： </text>
-<view><text>{{locate_time}}</text></view>
+<view><text>{{locate_time1}}</text></view>
 <text>打卡经度： </text>
-<view><text>{{locate_lon}}</text></view>
+<view><text>{{locate_lon1}}</text></view>
 <text>打卡纬度： </text>
-<view><text>{{locate_lat}}</text></view>
+<view><text>{{locate_lat1}}</text></view>
+<view><text>------------------------------</text></view>
+<view>运动员编号：{{id2}}</view>
+<text>打卡时间： </text>
+<view><text>{{locate_time2}}</text></view>
+<text>打卡经度： </text>
+<view><text>{{locate_lon2}}</text></view>
+<text>打卡纬度： </text>
+<view><text>{{locate_lat2}}</text></view>
+<view><text>------------------------------</text></view>
+<view>运动员编号：{{id3}}</view>
+<text>打卡时间： </text>
+<view><text>{{locate_time3}}</text></view>
+<text>打卡经度： </text>
+<view><text>{{locate_lon3}}</text></view>
+<text>打卡纬度： </text>
+<view><text>{{locate_lat3}}</text></view>
+
+<view> <button bindtap="return_to_pages">返回</button> </view>

@@ -75,7 +75,7 @@ Page({
   },
   go_result:function () {
     wx.navigateTo({
-      url: '../result/result',
+      url: '../map/map',
     })
   },
   

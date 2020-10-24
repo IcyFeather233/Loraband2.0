@@ -44,7 +44,7 @@ var Middlebanner = {
     'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595567764430&di=d0d64ed26def47c970d924ed3d36a764&imgtype=0&src=http%3A%2F%2Fcms-bucket.nosdn.127.net%2F130ea582cd184849b3a67364448bcced20171206235520.png%3FimageView%26thumbnail%3D550x0',
     'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=411031040,1469902166&fm=15&gp=0.jpg',
     'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4255683255,1573854473&fm=26&gp=0.jpg',
-    '../cptui/1.jpg',
+    'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1603530460&di=b4971965e1618669487df492c94fd88d&src=http://img.mp.itc.cn/upload/20170703/bf69540c1f484a60af511e1ba84c7172_th.jpg',
     ],
     indicatorDots: false,
     autoplay: true,

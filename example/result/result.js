@@ -6,8 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-      locate_time: 0,
-      locate_id: 0,
+      locate_time1: 0,
+      locate_time2: 0,
+      locate_time3: 0,
+      id1: 0,
+      id2: 0,
+      id3: 0,
+      locate_lon1: 0,
+      locate_lon2: 0,
+      locate_lon3: 0,
+      locate_lat1: 0,
+      locate_lat2: 0,
+      locate_lat3: 0,
       device_id: 1,
       start_time: 0,
       end_time: 0
@@ -22,9 +32,18 @@ Page({
       url: "https://www.loraband.com/points?time=0:0:0",
     success: function(res){
       that.setData( {
-        locate_time: (parseInt(res.data[0].time.slice(11,13))-8) + res.data[0].time.slice(13,19),
-        locate_lon: res.data[0].lon,
-        locate_lat: res.data[0].lat,
+        locate_time1: (parseInt(res.data[0].time.slice(11,13))-8) + res.data[0].time.slice(13,19),
+        locate_lon1: res.data[0].lon,
+        locate_lat1: res.data[0].lat,
+        id1: res.data[0].id,
+        locate_time2: (parseInt(res.data[1].time.slice(11,13))-8) + res.data[1].time.slice(13,19),
+        locate_lon2: res.data[1].lon,
+        locate_lat2: res.data[1].lat,
+        id2: res.data[1].id,
+        locate_time3: (parseInt(res.data[2].time.slice(11,13))-8) + res.data[2].time.slice(13,19),
+        locate_lon3: res.data[2].lon,
+        locate_lat3: res.data[2].lat,
+        id3: res.data[2].id,
       })
     }
     })
@@ -42,13 +61,23 @@ Page({
    */
   onShow: function (options) {
     var that = this;
+
     wx.request({
       url: "https://www.loraband.com/points?time=0:0:0",
     success: function(res){
       that.setData( {
-        locate_time: (parseInt(res.data[0].time.slice(11,13))-8) + res.data[0].time.slice(13,19),
-        locate_lon: res.data[0].lon,
-        locate_lat: res.data[0].lat,
+        locate_time1: (parseInt(res.data[0].time.slice(11,13))-8) + res.data[0].time.slice(13,19),
+        locate_lon1: res.data[0].lon,
+        locate_lat1: res.data[0].lat,
+        id1: res.data[0].id,
+        locate_time2: (parseInt(res.data[1].time.slice(11,13))-8) + res.data[1].time.slice(13,19),
+        locate_lon2: res.data[1].lon,
+        locate_lat2: res.data[1].lat,
+        id2: res.data[1].id,
+        locate_time3: (parseInt(res.data[2].time.slice(11,13))-8) + res.data[2].time.slice(13,19),
+        locate_lon3: res.data[2].lon,
+        locate_lat3: res.data[2].lat,
+        id3: res.data[2].id,
       })
       console.log(res.data)
     }
@@ -88,5 +117,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  return_to_pages:function () {
+    wx.switchTab({
+      url: '../first/first',
+    })
+  },
 })
