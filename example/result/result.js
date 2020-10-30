@@ -66,15 +66,15 @@ Page({
       url: "https://www.loraband.com/points?time=0:0:0",
     success: function(res){
       that.setData( {
-        locate_time1: (parseInt(res.data[0].time.slice(11,13))-8) + res.data[0].time.slice(13,19),
+        locate_time1: (parseInt(res.data[0].time.slice(11,13))-8 + 24) % 24 + res.data[0].time.slice(13,19),
         locate_lon1: res.data[0].lon,
         locate_lat1: res.data[0].lat,
         id1: res.data[0].id,
-        locate_time2: (parseInt(res.data[1].time.slice(11,13))-8) + res.data[1].time.slice(13,19),
+        locate_time2: (parseInt(res.data[1].time.slice(11,13))-8 + 24) % 24 + res.data[1].time.slice(13,19),
         locate_lon2: res.data[1].lon,
         locate_lat2: res.data[1].lat,
         id2: res.data[1].id,
-        locate_time3: (parseInt(res.data[2].time.slice(11,13))-8) + res.data[2].time.slice(13,19),
+        locate_time3: (parseInt(res.data[2].time.slice(11,13))-8 + 24) % 24 + res.data[2].time.slice(13,19),
         locate_lon3: res.data[2].lon,
         locate_lat3: res.data[2].lat,
         id3: res.data[2].id,

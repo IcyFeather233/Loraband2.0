@@ -33,16 +33,13 @@ Page({
       longitude:''
     },
     polyline:[{
-    points:[{
-      latitude:30.565429,
-      longitude:104.000301
-    }],
+    points:[],
     color: "#000000",
      width: 3,
     }, 
     {
       points:[],
-    color: "#000FFF",
+    color: "#00FF00",
      width: 3,
     }, 
     {
@@ -87,7 +84,6 @@ Page({
      * 无条件请求一次最新数据
      */
     console.log('请求接口：刷新数据(无条件执行)')
-    var polyline=that.data.polyline
     /**
      * 每隔一段时间请求服务器刷新数据(客户状态)
      * 当页面显示时开启定时器(开启实时刷新)
@@ -96,6 +92,7 @@ Page({
      */
     that.data.realTime = setInterval(function()
     {
+      var polyline=that.data.polyline
       // 请求服务器数据
       console.log('请求接口：刷新数据')
       wx.request({
@@ -112,9 +109,21 @@ Page({
             ['point2.longitude']:res.data[1].lon,
             ['point3.longitude']:res.data[2].lon,
           })
-          polyline[0].points.push(that.data.point1),
-          polyline[1].points.push(that.data.point2),
-          polyline[2].points.push(that.data.point3),
+          polyline[0].points.push({
+            'latitude':res.data[0].lat,
+            'longitude':res.data[0].lon
+          })
+          polyline[1].points.push({
+            'latitude':res.data[1].lat,
+            'longitude':res.data[1].lon
+          })
+          polyline[2].points.push({
+            'latitude':res.data[2].lat,
+            'longitude':res.data[2].lon
+          })
+          console.log(polyline)
+          // polyline[1].points.push(that.data.point2),
+          // polyline[2].points.push(that.data.point3),
           that.setData({
             polyline:polyline
           })
